@@ -174,10 +174,24 @@ export default class Carousel extends Component {
       }
       return (
         <React.Fragment key={key}>
-          { renderedItem }
+          {renderedItem}
         </React.Fragment>
       );
     });
+  }
+
+  renderNumberPage = () => {
+    const { data, NumberPagination } = this.props;
+    const { currentPage } = this.state;
+
+    if (!!NumberPagination) {
+      return (<NumberPagination
+        currentPage={currentPage}
+        total={data.length}
+      />)
+    } else {
+      return null;
+    }
   }
 
   renderPagination = () => {
@@ -216,7 +230,7 @@ export default class Carousel extends Component {
           horizontal
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
-          bounces={false}
+          bounces={true}
           // iOS & Android should have used onMomentumScrollEnd
           // the issue https://github.com/facebook/react-native/issues/21718
           // onMomentumScrollEnd={this.onMomentumScrollEnd}
@@ -231,6 +245,9 @@ export default class Carousel extends Component {
         </ScrollView>
         {
           this.renderPagination()
+        }
+        {
+          this.renderNumberPage()
         }
       </View>
     );
@@ -259,5 +276,5 @@ Carousel.defaultProps = {
   autoplay: false,
   autoplayInterval: 2000,
   pagination: null,
-  onPage: () => {},
+  onPage: () => { },
 };
