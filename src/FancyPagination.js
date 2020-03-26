@@ -110,7 +110,6 @@ const Pagination = (props) => {
         {renderDots()}
       </Transitioning.View>
     </View>
-
   );
 };
 

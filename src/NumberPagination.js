@@ -22,8 +22,6 @@ const NumberPagination = (props) => {
 };
 
 const styles = StyleSheet.create({
-
-
   paginationStyle: {
     position: 'absolute',
     backgroundColor: '#444857',

@@ -1,4 +1,4 @@
-# react-native-x-carousel
+# react-native-x2-carousel
 > a cross-platform (`iOS`, `Android`, `Web`) react native carousel component
   
 
@@ -12,31 +12,16 @@
 
 </p>
 
-
-
-## Preview
-[View Live Demo](https://snack.expo.io/@fuyuanx/react-native-x-carousel)
-
-`react-native-x-carousel` is a React Native component for building a cross-platform carousel.
-
-Highlighted Features:
-
-1. **Cross Platform** - uniform behaviors among `iOS`, `Android` and `Web`
-2. **Loop Cycle** - support head-to-tail / tail-to-head loop cycle
-4. **Auto Play** - auto play with smooth transition
-5. **Fully Customizable** - customizable carousel content & pagination
-
 ## Install
 ```bash
-$ npm install react-native-x-carousel --save
+$ npm install react-native-x2-carousel --save
 ```
 
 ## Usage
-> a minimally-configured carousel
 ```js
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import Carousel, { Pagination } from 'react-native-x-carousel';
+import Carousel, { Pagination } from 'react-native-x2-carousel';
 
 const DATA = [
   { text: '#1' },
@@ -103,7 +88,7 @@ export default App;
 import Carousel, {
   Pagination, // dark-colored pagination component
   PaginationLight // light-colored pagination component
-} from 'react-native-x-carousel';
+} from 'react-native-x2-carousel';
 // ...
 const App = () => (
   <Carousel
